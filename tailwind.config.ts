@@ -1,20 +1,39 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+     extend: {
+      colors: {
+        "neutral-background-2": "#2d2d2d",
+        "text-disabled": "#707070",
+        "borders-default": "#494949",
+        "text-normal": "#cbcbcb",
+        "text-muted": "#999",
+        "text-headings": "#f8f8f8",
+        "primary-orange": "#fea013",
+        gray: "#111",
+        "primary-orange-muted": "#69563a",
+      },
+      spacing: {},
+      fontFamily: {
+        heading2: "Poppins",
+        "font-awesome-6-free": "'Font Awesome 6 Free'",
+      },
+      fontSize: {
+        sm: "14px",
+        base: "16px",
+        lg: "18px",
+        xs: "12px",
+        inherit: "inherit",
       },
     },
   },
   plugins: [],
 }
-export default config
